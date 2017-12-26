@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"io/ioutil"
+	"log"
+	"strconv"
+	"strings"
+)
 
 func main() {
-	fmt.Println("vim-go")
+	inputBytes, err := ioutil.ReadFile("input.in")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	inputString := strings.Trim(string(inputBytes), "\n \t")
 }
